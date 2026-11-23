@@ -1,0 +1,14 @@
+{
+  "note": "Fictional sample registry for the demo: eight imaginary biomedical datasets invented for illustration. Not real experimental data.",
+  "targets": { "scRNA-seq": 50000, "microscopy": 20000, "proteomics": 5000, "clinical-notes": 10000 },
+  "datasets": [
+    { "id": "ds-pbmc", "name": "PBMC immune atlas pilot", "modality": "scRNA-seq", "samples": 42300, "missingRate": 0.03, "duplicateRate": 0.01, "batches": 6, "positiveShare": 0.48, "intendedUse": "Immune cell type classifier pretraining", "license": "CC-BY-4.0", "consentScope": "broad research use" },
+    { "id": "ds-tumor", "name": "Tumor morphology plates", "modality": "microscopy", "samples": 18250, "missingRate": 0.06, "duplicateRate": 0.02, "batches": 9, "positiveShare": 0.31, "intendedUse": "Morphology feature extractor", "license": "CC-BY-4.0", "consentScope": "broad research use" },
+    { "id": "ds-plasma", "name": "Plasma proteomics cohort A", "modality": "proteomics", "samples": 3100, "missingRate": 0.14, "duplicateRate": 0.00, "batches": 2, "positiveShare": 0.52, "intendedUse": "Biomarker ranking baseline", "license": "internal only", "consentScope": "cohort A study only" },
+    { "id": "ds-sepsis", "name": "Sepsis notes triage set", "modality": "clinical-notes", "samples": 9600, "missingRate": 0.05, "duplicateRate": 0.03, "batches": 3, "positiveShare": 0.09, "intendedUse": "Deterioration risk model", "license": "internal only", "consentScope": "de-identified, no model training beyond this project" },
+    { "id": "ds-neuron", "name": "Neuron culture timelapse", "modality": "microscopy", "samples": 7400, "missingRate": 0.02, "duplicateRate": 0.11, "batches": 1, "positiveShare": 0.50, "intendedUse": "Viability segmentation", "license": "CC0", "consentScope": "broad research use" },
+    { "id": "ds-crispr", "name": "CRISPR screen transcriptomics", "modality": "scRNA-seq", "samples": 66800, "missingRate": 0.09, "duplicateRate": 0.04, "batches": 14, "positiveShare": 0.22, "intendedUse": "Perturbation response model", "license": "CC-BY-4.0", "consentScope": "broad research use" },
+    { "id": "ds-serum", "name": "Serum metabolomics pilot", "modality": "proteomics", "samples": 1450, "missingRate": 0.21, "duplicateRate": 0.05, "batches": 1, "positiveShare": 0.44, "intendedUse": "Feasibility screen", "license": "undecided", "consentScope": "pilot consent, re-contact required" },
+    { "id": "ds-discharge", "name": "Discharge summary corpus", "modality": "clinical-notes", "samples": 22100, "missingRate": 0.04, "duplicateRate": 0.02, "batches": 5, "positiveShare": 0.37, "intendedUse": "Summarization fine-tune", "license": "internal only", "consentScope": "de-identified, training permitted" }
+  ]
+}
