@@ -1,4 +1,4 @@
-import { pgTable, serial, text, integer } from 'drizzle-orm/pg-core';
+import { pgTable, serial, text, integer, bigint, index } from 'drizzle-orm/pg-core';
 
 export const reviews = pgTable('reviews', {
   id: serial('id').primaryKey(),
@@ -9,8 +9,5 @@ export const reviews = pgTable('reviews', {
   createdAt: text('created_at').notNull(),
 });
 export const rateEvents = pgTable('rate_events', {
-  id: serial('id').primaryKey(),
-  ownerId: text('owner_id').notNull(),
-  kind: text('kind').notNull(),
-  at: integer('at').notNull(),
-});
+  id: integer('id').primaryKey().generatedAlwaysAsIdentity(), ownerId: text('owner_id').notNull(), kind: text('kind').notNull(), at: bigint('at', { mode: 'number' }).notNull(),
+}, (t) => [index('rate_idx').on(t.ownerId, t.kind, t.at)]);
